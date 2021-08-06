@@ -16,21 +16,21 @@ https://github.com/Safaa711/Real-Time-Face-Detection-System/blob/main/haarcascad
 
 4- In my text editor, I have wrote the following code: ( https://github.com/Safaa711/Real-Time-Face-Detection-System/blob/main/FaceDetection.py )
 
-import cv2
+  import cv2
 
-cascade_classifier = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
+       cascade_classifier = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
 
-cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0)
 
-while True:
+    while True:
    
-   ret, frame = cap.read()
+     ret, frame = cap.read()
   
-  gray = cv2.cvtColor(frame, 0)
+     gray = cv2.cvtColor(frame, 0)
    
-   detections = cascade_classifier.detectMultiScale(gray,scaleFactor=1.3,minNeighbors=5)
+      detections = cascade_classifier.detectMultiScale(gray,scaleFactor=1.3,minNeighbors=5)
   
-  if(len(detections) > 0):
+      if(len(detections) > 0):
     
         (x,y,w,h) = detections[0]
         
@@ -48,9 +48,8 @@ while True:
     
         break
         
-        cap.release()
-
-cv2.destroyAllWindows()
+        cap.release() 
+        cv2.destroyAllWindows()
 
 The result:
 
