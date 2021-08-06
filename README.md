@@ -14,11 +14,12 @@ pip install opencv-python
 
 https://github.com/Safaa711/Real-Time-Face-Detection-System/blob/main/haarcascades.zip
 
-4- In my text editor, I have wrote the following code: ( https://github.com/Safaa711/Real-Time-Face-Detection-System/blob/main/FaceDetection.py )
+4- In my text editor, I have wrote the following code: 
 
-  import cv2
 
-       cascade_classifier = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
+    import cv2
+    
+    cascade_classifier = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
 
     cap = cv2.VideoCapture(0)
 
