@@ -14,7 +14,7 @@ pip install opencv-python
 
 https://github.com/Safaa711/Real-Time-Face-Detection-System/blob/main/haarcascades.zip
 
-4- In my text editor, I have wrote the following code: 
+4- In my text editor, I have written the following code: 
 
 
     import cv2
