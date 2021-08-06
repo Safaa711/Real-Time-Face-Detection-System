@@ -14,7 +14,7 @@ pip install opencv-python
 
 https://github.com/Safaa711/Real-Time-Face-Detection-System/blob/main/haarcascades.zip
 
-4- In my text editor, I have wrote the following code: 
+4- In my text editor, I have wrote the following code: ( https://github.com/Safaa711/Real-Time-Face-Detection-System/blob/main/FaceDetection.py )
 
 import cv2
 
@@ -48,7 +48,7 @@ while True:
     
         break
         
-cap.release()
+        cap.release()
 
 cv2.destroyAllWindows()
 
