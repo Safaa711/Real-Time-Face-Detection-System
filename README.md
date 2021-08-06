@@ -10,35 +10,49 @@ pip install opencv-python
 
 ![image](https://user-images.githubusercontent.com/85526390/128372318-fdf27c0f-4d25-4907-ab74-33f808660fe5.png)
 
-3- Then I have downloaded the Haar Cascade zip file from the following link:
+3- Then I have downloaded Haar Cascade:
 
-https://drive.google.com/file/d/1pomC9Zw178nxgNOrpemaQfSH8rSVyMBD/view
+haarcascades.zip
 
-4- In my text editor, I have wrote the following code:
+4- In my text editor, I have wrote the following code: 
 
 import cv2
 
 cascade_classifier = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
+
 cap = cv2.VideoCapture(0)
 
 while True:
-    # Capture frame-by-frame
-    ret, frame = cap.read()
-    # Our operations on the frame come here
-    gray = cv2.cvtColor(frame, 0)
-    detections = cascade_classifier.detectMultiScale(gray,scaleFactor=1.3,minNeighbors=5)
-    if(len(detections) > 0):
+  
+  # Capture frame-by-frame
+   
+   ret, frame = cap.read()
+  
+  # Our operations on the frame come here
+  
+  gray = cv2.cvtColor(frame, 0)
+   
+   detections = cascade_classifier.detectMultiScale(gray,scaleFactor=1.3,minNeighbors=5)
+  
+  if(len(detections) > 0):
+    
         (x,y,w,h) = detections[0]
+        
         frame = cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
 
     # for (x,y,w,h) in detections:
+    
     # 	frame = cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
 
     # Display the resulting frame
+    
     cv2.imshow('frame',frame)
+    
     if cv2.waitKey(1) & 0xFF == ord('q'):
+    
         break
 cap.release()
+
 cv2.destroyAllWindows()
 
 The result:
